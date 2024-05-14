@@ -5,7 +5,7 @@ import os
 
 import click
 import cv2
-import mif
+import coe
 import numpy as np
 
 
@@ -109,7 +109,7 @@ def process(input, output, mode, force, channel_width, word_width, threshold, du
     # reshape memory to (address, word)
     mem = mem.reshape((word_count, word_width))
     with open(output, 'w') as f:
-        mif.dump(mem, f, data_radix=dump_radix)
+        coe.dump(mem, f, data_radix=dump_radix)
     
     print('Dump succeeded!')
 
