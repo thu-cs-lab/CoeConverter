@@ -56,7 +56,7 @@ def process(input, output, force, word_width, dump_radix):
     mem = mem.reshape((word_count, word_length))
 
     with open(output, 'w') as f:
-        coe.dump(mem, f, data_radix=dump_radix)
+        coe.dump(mem, f, packed=True, data_radix=dump_radix)
     
     print('Dump succeeded!')
 
